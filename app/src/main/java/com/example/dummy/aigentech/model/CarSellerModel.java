@@ -14,6 +14,7 @@ public class CarSellerModel {
     String exshowroom_price;
     String rto;
     String price;
+    String carUrl;
 
     public int getId() {
         return id;
@@ -85,5 +86,13 @@ public class CarSellerModel {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public String getCarUrl() {
+        return carUrl;
+    }
+
+    public void setCarUrl(String carUrl) {
+        this.carUrl = carUrl;
     }
 }
