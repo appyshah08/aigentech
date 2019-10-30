@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AigenTech</string>
+    <string name="emailLoginHint">Email Id or Mobile Number</string>
+    <string name="passwordHint">Enter password</string>
+    <string name="forgotPwd">Forgot Password?</string>
+    <string name="signin">Sign In</string>
+    <string name="createAd">Create Ad</string>
+    <string name="sellerlabel">Seller Name</string>
+    <string name="carName">Model Name</string>
+    <string name="manuName">Manufacture Name</string>
+    <string name="exShowroomprice">Ex Showroom Price</string>
+    <string name="rto">RTO</string>
+    <string name="uploadPhoto"><u>Upload Photo</u></string>
+    <string name="mileage">Mileage</string>
+    <string name="color">Colour</string>
+    <string name="price">Price</string>
+</resources>

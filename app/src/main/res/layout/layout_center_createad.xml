@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/createad_bg_drawable"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:focusableInTouchMode="true"
+    android:paddingBottom="25dp"
+    android:layout_marginTop="20dp">
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="5dp"
+       android:orientation="horizontal">
+
+       <TextView
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:id="@+id/tvSellerLabel"
+           android:text="@string/sellerlabel"
+           android:textStyle="bold"
+           android:textColor="@color/primaryLightColor"
+           />
+
+       <EditText
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="2"
+           android:id="@+id/etSellerName"
+           android:paddingRight="5dp"
+           android:textCursorDrawable="@null"
+           android:maxLines="1"
+           app:backgroundTint="@color/colorPrimary"
+           />
+
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:text="@string/carName"
+            android:textStyle="bold"
+            android:textColor="@color/primaryLightColor"
+            />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/etModelName"
+            android:textCursorDrawable="@null"
+            android:maxLines="1"
+            android:paddingRight="5dp"
+            app:backgroundTint="@color/colorPrimary"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:text="@string/manuName"
+            android:textStyle="bold"
+            android:textColor="@color/primaryLightColor"
+            />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingRight="5dp"
+            android:id="@+id/etManuName"
+            android:maxLines="1"
+            app:backgroundTint="@color/colorPrimary"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:text="@string/mileage"
+            android:textStyle="bold"
+            android:textColor="@color/primaryLightColor"
+            />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textCursorDrawable="@null"
+            android:paddingRight="5dp"
+            android:id="@+id/etMileage"
+            android:maxLines="1"
+            app:backgroundTint="@color/colorPrimary"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:text="@string/color"
+            android:textStyle="bold"
+            android:textColor="@color/primaryLightColor"
+            />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingRight="5dp"
+            android:id="@+id/etColour"
+            android:maxLines="1"
+            app:backgroundTint="@color/colorPrimary"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:text="@string/exShowroomprice"
+            android:textStyle="bold"
+            android:textColor="@color/primaryLightColor"
+            />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textCursorDrawable="@null"
+            android:id="@+id/etExshowroomPrice"
+            android:maxLines="1"
+            android:paddingRight="5dp"
+            app:backgroundTint="@color/colorPrimary"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:text="@string/rto"
+            android:textStyle="bold"
+            android:textColor="@color/primaryLightColor"
+            />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingRight="5dp"
+            android:textCursorDrawable="@null"
+            android:id="@+id/etRto"
+            android:maxLines="1"
+            app:backgroundTint="@color/colorPrimary"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:text="@string/price"
+            android:textStyle="bold"
+            android:textColor="@color/primaryLightColor"
+            />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingRight="5dp"
+            android:textCursorDrawable="@null"
+            android:id="@+id/etPrice"
+            android:maxLines="1"
+            app:backgroundTint="@color/colorPrimary"
+            />
+
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+
+            android:maxLines="1"
+            android:text="@string/uploadPhoto"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:textAlignment="center"
+
+            android:textColor="@color/primaryLightColor"
+            />
+
+       <FrameLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="100dp"
+           android:layout_marginTop="25dp"
+           android:layout_marginLeft="30dp"
+           android:layout_marginRight="30dp"
+           android:background="#DBDBDB"
+           android:id="@+id/ivSavedPhoto"/>
+           <ImageView
+               android:layout_width="25dp"
+               android:layout_height="25dp"
+               android:layout_marginTop="15dp"
+               android:layout_marginLeft="30dp"
+               android:layout_marginRight="20dp"
+               android:background="@drawable/add_icon"
+               android:layout_gravity="end"
+
+               android:id="@+id/ivUploadPhoto"/>
+       </FrameLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCreateAd"
+        android:textColor="@color/primaryDarkColor"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:background="@drawable/login_btn_drawable"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:text="@string/createAd"/>
+
+</LinearLayout>
+</ScrollView>
