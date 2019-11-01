@@ -108,6 +108,7 @@ public class HomeActivity extends AppCompatActivity {
         dbHelper = DBHelper.getInstance(this);
         carSellerModelList.clear();
         carSellerModelList = dbHelper.getAllModel();
+        sellerListAdapter.setCarSellerModelList(carSellerModelList);
         sellerListAdapter.notifyDataSetChanged();
     }
 }
