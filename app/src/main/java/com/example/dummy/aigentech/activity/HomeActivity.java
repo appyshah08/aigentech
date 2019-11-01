@@ -23,6 +23,7 @@ public class HomeActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     DBHelper dbHelper;
     List<CarSellerModel> carSellerModelList;
+    SellerListAdapter sellerListAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,7 @@ public class HomeActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.createAd:
                 Intent nextIntent = new Intent(this,CreateAdActivity.class);
-                startActivity(nextIntent);
+                startActivityForResult(nextIntent,45);
                 break;
         }
 
@@ -89,9 +90,24 @@ public class HomeActivity extends AppCompatActivity {
     {
         dbHelper = DBHelper.getInstance(this);
         carSellerModelList = dbHelper.getAllModel();
-        SellerListAdapter sellerListAdapter=new SellerListAdapter(carSellerModelList,this);
+        sellerListAdapter=new SellerListAdapter(carSellerModelList,this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setAdapter(sellerListAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == 45){
+            updateDb();
+        }
+    }
+
+    public void updateDb()
+    {
+        dbHelper = DBHelper.getInstance(this);
+        carSellerModelList.clear();
+        carSellerModelList = dbHelper.getAllModel();
+        sellerListAdapter.notifyDataSetChanged();
     }
 }

@@ -277,6 +277,7 @@
            android:layout_marginTop="25dp"
            android:layout_marginLeft="30dp"
            android:layout_marginRight="30dp"
+           android:scaleType="fitXY"
            android:background="#DBDBDB"
            android:id="@+id/ivSavedPhoto"/>
            <ImageView

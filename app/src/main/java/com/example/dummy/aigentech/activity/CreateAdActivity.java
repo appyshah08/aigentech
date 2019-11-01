@@ -175,7 +175,15 @@ public class CreateAdActivity extends AppCompatActivity {
                 finish();
             }
         });
-        AlertDialog dialog = alert.create();
+        final AlertDialog dialog = alert.create();
+        dialog.setOnShowListener( new DialogInterface.OnShowListener() {
+            @Override
+            public void onShow(DialogInterface arg0) {
+               // dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(CreateAdActivity.this.getResources().getColor(R.color.colorPrimaryDark));
+                dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(CreateAdActivity.this.getResources().getColor(R.color.colorPrimaryDark));
+            }
+        });
+
         dialog.show();
     }
 

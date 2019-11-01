@@ -99,6 +99,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 carSellerModel.setExshowroom_price(cursor.getString(cursor.getColumnIndex(DBScript.COLUMN_EX_SHOWROOM_PRICE)));
                 carSellerModel.setRto(cursor.getString(cursor.getColumnIndex(DBScript.COLUMN_RTO)));
                 carSellerModel.setPrice(cursor.getString(cursor.getColumnIndex(DBScript.COLUMN_Price)));
+                carSellerModel.setCarUrl(cursor.getString(cursor.getColumnIndex(DBScript.COLUMN_IMAGE_URL)));
                 carSellerModelList.add(carSellerModel);
             } while (cursor.moveToNext());
         }
