@@ -1,6 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="10dp"
     android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:textStyle="bold"
+        android:paddingBottom="10dp"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/namelabel"></TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:paddingRight="5dp"
+        android:id="@+id/etName"
+        android:hint="Name"
+        android:paddingLeft="5dp"
+        android:paddingTop="10dp"
+        android:textCursorDrawable="@null"
+        android:background="@drawable/backgrnd_drawable"
+
+        ></EditText>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/msglabel"></TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textCursorDrawable="@null"
+        android:maxLines="4"
+        android:minLines="4"
+        android:hint="Message"
+        android:paddingTop="10dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:id="@+id/etMsg"
+
+        android:gravity="top"
+        android:background="@drawable/backgrnd_drawable"></EditText>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCreateAd"
+        android:textColor="@color/primaryDarkColor"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+
+        android:background="@drawable/login_btn_drawable"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:text="@string/send"/>
+
+</LinearLayout>

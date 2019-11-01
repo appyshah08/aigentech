@@ -1,6 +1,280 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
 
-</android.support.constraint.ConstraintLayout>
+        android:background="@drawable/createad_bg_drawable"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:focusableInTouchMode="true"
+        android:paddingBottom="25dp"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#DBDBDB"
+            android:id="@+id/ivSavedPhoto"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/tvSellerLabel"
+                android:text="@string/sellerlabel"
+                android:textStyle="bold"
+                android:textColor="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/tvSellerName"
+                android:paddingRight="5dp"
+                android:textCursorDrawable="@null"
+                android:maxLines="1"
+                app:backgroundTint="@color/colorPrimary"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:text="@string/carName"
+                android:textStyle="bold"
+                android:textColor="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:id="@+id/tvModelName"
+                android:textCursorDrawable="@null"
+                android:maxLines="1"
+                android:paddingRight="5dp"
+                app:backgroundTint="@color/colorPrimary"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:text="@string/manuName"
+                android:textStyle="bold"
+                android:textColor="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:paddingRight="5dp"
+                android:id="@+id/tvManuName"
+                android:maxLines="1"
+                app:backgroundTint="@color/colorPrimary"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:text="@string/mileage"
+                android:textStyle="bold"
+                android:textColor="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textCursorDrawable="@null"
+                android:paddingRight="5dp"
+                android:id="@+id/tvMileage"
+                android:maxLines="1"
+                app:backgroundTint="@color/colorPrimary"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:text="@string/color"
+                android:textStyle="bold"
+                android:textColor="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:paddingRight="5dp"
+                android:id="@+id/tvColour"
+                android:maxLines="1"
+                app:backgroundTint="@color/colorPrimary"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:text="@string/exShowroomprice"
+                android:textStyle="bold"
+                android:textColor="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textCursorDrawable="@null"
+                android:id="@+id/tvExshowroomPrice"
+                android:maxLines="1"
+                android:paddingRight="5dp"
+                app:backgroundTint="@color/colorPrimary"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:text="@string/rto"
+                android:textStyle="bold"
+                android:textColor="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:paddingRight="5dp"
+                android:textCursorDrawable="@null"
+                android:id="@+id/tvRto"
+                android:maxLines="1"
+                app:backgroundTint="@color/colorPrimary"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:text="@string/price"
+                android:textStyle="bold"
+                android:textColor="@color/primaryLightColor"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:paddingRight="5dp"
+                android:textCursorDrawable="@null"
+                android:id="@+id/tvPrice"
+                android:maxLines="1"
+                app:backgroundTint="@color/colorPrimary"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCreateAd"
+            android:textColor="@color/primaryDarkColor"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+             android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/login_btn_drawable"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:text="@string/contact"/>
+
+    </LinearLayout>
+</ScrollView>

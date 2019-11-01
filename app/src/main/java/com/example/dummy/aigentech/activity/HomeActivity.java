@@ -1,20 +1,28 @@
 package com.example.dummy.aigentech.activity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.example.dummy.aigentech.R;
+import com.example.dummy.aigentech.adapter.SellerListAdapter;
 import com.example.dummy.aigentech.common.DBHelper;
 import com.example.dummy.aigentech.common.DBScript;
+import com.example.dummy.aigentech.model.CarSellerModel;
+
+import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
+    DBHelper dbHelper;
+    List<CarSellerModel> carSellerModelList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +43,8 @@ public class HomeActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.createAd:
-
+                Intent nextIntent = new Intent(this,CreateAdActivity.class);
+                startActivity(nextIntent);
                 break;
         }
 
@@ -46,16 +55,43 @@ public class HomeActivity extends AppCompatActivity {
     {
         insertDataInDb();
         recyclerView = findViewById(R.id.rvSellerName);
-
+        getDataFromDb();
     }
 
     public void insertDataInDb()
     {
-        DBHelper dbHelper = DBHelper.getInstance(this);
-        for(int i=0;i<3;i++)
-        {
-            ContentValues cv = new ContentValues();
-            cv.put(DBScript.COLUMN_IMAGE_URL,R.drawable.carimg1);
-        }
+        dbHelper = DBHelper.getInstance(this);
+        ContentValues cv = new ContentValues();
+        cv.put(DBScript.COLUMN_IMAGE_URL,"CM1");
+        cv.put(DBScript.COLUMN_SELLER_NAME,"RT Car Showroom");
+        cv.put(DBScript.COLUMN_MODEL_NAME,"Maruti Alto");
+        cv.put(DBScript.COLUMN_MANUFACTURE_NAME,"Maruti");
+        cv.put(DBScript.COLUMN_COLOUR,"BLUE");
+        cv.put(DBScript.COLUMN_Price,"1,20,000");
+        cv.put(DBScript.COLUMN_EX_SHOWROOM_PRICE,"2,20,000");
+        cv.put(DBScript.COLUMN_RTO,"Mumbai");
+        cv.put(DBScript.COLUMN_MILEAGE,"22 km/l");
+        dbHelper.insertCarEntry(cv);
+
+        cv.put(DBScript.COLUMN_IMAGE_URL,"CM2");
+        cv.put(DBScript.COLUMN_SELLER_NAME,"RT Car Showroom");
+        cv.put(DBScript.COLUMN_MODEL_NAME,"Maruti Alto LX1");
+        cv.put(DBScript.COLUMN_MANUFACTURE_NAME,"Maruti");
+        cv.put(DBScript.COLUMN_COLOUR,"RED");
+        cv.put(DBScript.COLUMN_Price,"2,20,000");
+        cv.put(DBScript.COLUMN_EX_SHOWROOM_PRICE,"3,20,000");
+        cv.put(DBScript.COLUMN_RTO,"Mumbai");
+        cv.put(DBScript.COLUMN_MILEAGE,"22 km/l");
+        dbHelper.insertCarEntry(cv);
+    }
+
+    public void getDataFromDb()
+    {
+        dbHelper = DBHelper.getInstance(this);
+        carSellerModelList = dbHelper.getAllModel();
+        SellerListAdapter sellerListAdapter=new SellerListAdapter(carSellerModelList,this);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        recyclerView.setAdapter(sellerListAdapter);
+        recyclerView.setLayoutManager(linearLayoutManager);
     }
 }

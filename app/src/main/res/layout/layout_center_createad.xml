@@ -3,19 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:background="@drawable/createad_bg_drawable"
     android:orientation="vertical"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
-    android:focusableInTouchMode="true"
     android:paddingBottom="25dp"
     android:layout_marginTop="20dp">
 
-
+    <View android:layout_width="fill_parent" android:id="@+id/focus_view"
+        android:layout_height="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+        <requestFocus/></View>
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
@@ -96,6 +99,7 @@
             android:layout_weight="2"
             android:paddingRight="5dp"
             android:id="@+id/etManuName"
+            android:textCursorDrawable="@null"
             android:maxLines="1"
             app:backgroundTint="@color/colorPrimary"
             />
@@ -153,6 +157,7 @@
             android:layout_weight="2"
             android:paddingRight="5dp"
             android:id="@+id/etColour"
+            android:textCursorDrawable="@null"
             android:maxLines="1"
             app:backgroundTint="@color/colorPrimary"
             />
@@ -182,6 +187,7 @@
             android:textCursorDrawable="@null"
             android:id="@+id/etExshowroomPrice"
             android:maxLines="1"
+            android:inputType="number"
             android:paddingRight="5dp"
             app:backgroundTint="@color/colorPrimary"
             />
@@ -241,6 +247,7 @@
             android:textCursorDrawable="@null"
             android:id="@+id/etPrice"
             android:maxLines="1"
+            android:inputType="number"
             app:backgroundTint="@color/colorPrimary"
             />
 

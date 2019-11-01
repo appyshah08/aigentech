@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AigenTech</string>
+    <string name="app_name">Dummy</string>
     <string name="emailLoginHint">Email Id or Mobile Number</string>
     <string name="passwordHint">Enter password</string>
     <string name="forgotPwd">Forgot Password?</string>
@@ -14,4 +14,11 @@
     <string name="mileage">Mileage</string>
     <string name="color">Colour</string>
     <string name="price">Price</string>
+    <string name="contact">Contact Me</string>
+    <string name="namelabel">Enter Name</string>
+    <string name="msglabel">Enter Message</string>
+    <string name="send">Send</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
