@@ -97,7 +97,7 @@ public class ViewAdActivity extends AppCompatActivity {
         if(carSellerModel.getCarUrl()!=null && !carSellerModel.getCarUrl().isEmpty())
         {
             if(carSellerModel.getCarUrl().equalsIgnoreCase("CM1")){
-                Glide.with(this).load(getResources().getDrawable(R.drawable.carimg2)).into(ivSavedPhoto);
+                Glide.with(this).load(getResources().getDrawable(R.drawable.carimg1)).into(ivSavedPhoto);
             }else if(carSellerModel.getCarUrl().equalsIgnoreCase("CM2")){
                 Glide.with(this).load(getResources().getDrawable(R.drawable.carimg2)).into(ivSavedPhoto);
             }else {

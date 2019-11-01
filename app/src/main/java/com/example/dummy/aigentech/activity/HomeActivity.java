@@ -2,6 +2,7 @@ package com.example.dummy.aigentech.activity;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -61,29 +62,36 @@ public class HomeActivity extends AppCompatActivity {
 
     public void insertDataInDb()
     {
-        dbHelper = DBHelper.getInstance(this);
-        ContentValues cv = new ContentValues();
-        cv.put(DBScript.COLUMN_IMAGE_URL,"CM1");
-        cv.put(DBScript.COLUMN_SELLER_NAME,"RT Car Showroom");
-        cv.put(DBScript.COLUMN_MODEL_NAME,"Maruti Alto");
-        cv.put(DBScript.COLUMN_MANUFACTURE_NAME,"Maruti");
-        cv.put(DBScript.COLUMN_COLOUR,"BLUE");
-        cv.put(DBScript.COLUMN_Price,"1,20,000");
-        cv.put(DBScript.COLUMN_EX_SHOWROOM_PRICE,"2,20,000");
-        cv.put(DBScript.COLUMN_RTO,"Mumbai");
-        cv.put(DBScript.COLUMN_MILEAGE,"22 km/l");
-        dbHelper.insertCarEntry(cv);
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0);
+        if(pref.getBoolean("insert",false)) {
+            dbHelper = DBHelper.getInstance(this);
+            ContentValues cv = new ContentValues();
+            cv.put(DBScript.COLUMN_IMAGE_URL, "CM1");
+            cv.put(DBScript.COLUMN_SELLER_NAME, "RT Car Showroom");
+            cv.put(DBScript.COLUMN_MODEL_NAME, "Maruti Alto");
+            cv.put(DBScript.COLUMN_MANUFACTURE_NAME, "Maruti");
+            cv.put(DBScript.COLUMN_COLOUR, "BLUE");
+            cv.put(DBScript.COLUMN_Price, "1,20,000");
+            cv.put(DBScript.COLUMN_EX_SHOWROOM_PRICE, "2,20,000");
+            cv.put(DBScript.COLUMN_RTO, "Mumbai");
+            cv.put(DBScript.COLUMN_MILEAGE, "22 km/l");
+            dbHelper.insertCarEntry(cv);
 
-        cv.put(DBScript.COLUMN_IMAGE_URL,"CM2");
-        cv.put(DBScript.COLUMN_SELLER_NAME,"RT Car Showroom");
-        cv.put(DBScript.COLUMN_MODEL_NAME,"Maruti Alto LX1");
-        cv.put(DBScript.COLUMN_MANUFACTURE_NAME,"Maruti");
-        cv.put(DBScript.COLUMN_COLOUR,"RED");
-        cv.put(DBScript.COLUMN_Price,"2,20,000");
-        cv.put(DBScript.COLUMN_EX_SHOWROOM_PRICE,"3,20,000");
-        cv.put(DBScript.COLUMN_RTO,"Mumbai");
-        cv.put(DBScript.COLUMN_MILEAGE,"22 km/l");
-        dbHelper.insertCarEntry(cv);
+            cv.put(DBScript.COLUMN_IMAGE_URL, "CM2");
+            cv.put(DBScript.COLUMN_SELLER_NAME, "RT Car Showroom");
+            cv.put(DBScript.COLUMN_MODEL_NAME, "Maruti Alto LX1");
+            cv.put(DBScript.COLUMN_MANUFACTURE_NAME, "Maruti");
+            cv.put(DBScript.COLUMN_COLOUR, "RED");
+            cv.put(DBScript.COLUMN_Price, "2,20,000");
+            cv.put(DBScript.COLUMN_EX_SHOWROOM_PRICE, "3,20,000");
+            cv.put(DBScript.COLUMN_RTO, "Mumbai");
+            cv.put(DBScript.COLUMN_MILEAGE, "22 km/l");
+            dbHelper.insertCarEntry(cv);
+            // 0 - for private mode
+            SharedPreferences.Editor editor = pref.edit();
+            editor.putBoolean("insert", true);
+            editor.commit();
+        }
     }
 
     public void getDataFromDb()
